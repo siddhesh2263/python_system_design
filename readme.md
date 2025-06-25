@@ -6,6 +6,59 @@
 
 <br>
 
+## Table of Contents
+
+1. [Introduction](#introduction)  
+   - [Tools and Dependencies](#tools-and-dependencies)  
+   - [Article Scope](#article-scope)  
+
+2. [Part 1 – Auth Service](#part-1--auth-service)  
+   - [Virtual Environment Setup](#virtual-environment-setup)  
+   - [MySQL Initialization](#mysql-initialization)  
+   - [Flask + MySQL Integration](#flask--mysql-integration)  
+   - [JWT Token Generation & Validation](#jwt-token-generation--validation)  
+   - [Dockerizing the Auth Service](#dockerizing-the-auth-service)  
+   - [Kubernetes Manifests for Auth](#kubernetes-manifests-for-auth)  
+
+3. [Part 2 – Gateway Service](#part-2--gateway-service)  
+   - [Role of Gateway in Microservices](#role-of-gateway-in-microservices)  
+   - [API Route Implementation](#api-route-implementation)  
+   - [JWT Token Forwarding & Validation](#jwt-token-forwarding--validation)  
+   - [MongoDB and RabbitMQ Integration](#mongodb-and-rabbitmq-integration)  
+   - [Dockerization and K8s Deployment](#dockerization-and-k8s-deployment)  
+   - [Enabling Ingress for External Access](#enabling-ingress-for-external-access)  
+
+4. [Part 3 – RabbitMQ Setup](#part-3--rabbitmq-setup)  
+   - [Host Entry and Console Access](#host-entry-and-console-access)  
+   - [StatefulSet and Persistent Volumes](#statefulset-and-persistent-volumes)  
+   - [Queue Configuration](#queue-configuration)  
+   - [GUI and Port Management](#gui-and-port-management)  
+
+5. [Part 4 – Converter Service](#part-4--converter-service)  
+   - [Consuming from `video` Queue](#consuming-from-video-queue)  
+   - [Video → MP3 Conversion Logic](#video--mp3-conversion-logic)  
+   - [MongoDB + RabbitMQ Integration](#mongodb--rabbitmq-integration)  
+   - [Dockerfile and ConfigMaps](#dockerfile-and-configmaps)  
+
+6. [Part 5 – Notification Service](#part-5--notification-service)  
+   - [Consuming from `mp3` Queue](#consuming-from-mp3-queue)  
+   - [Sending Email Notifications](#sending-email-notifications)  
+   - [Secrets and Configurations](#secrets-and-configurations)  
+
+7. [Part 6 – Running the Full Application](#part-6--running-the-full-application)  
+   - [Start-Up Sequence](#start-up-sequence)  
+   - [Testing Login and Upload](#testing-login-and-upload)  
+   - [Downloading MP3 After Notification](#downloading-mp3-after-notification)  
+
+8. [Part 7 – Troubleshooting & Notes](#part-7--troubleshooting--notes)  
+   - [MongoDB Connection Issues](#mongodb-connection-issues)  
+   - [Rebuilding and Redeploying Docker Images](#rebuilding-and-redeploying-docker-images)  
+   - [Docker & Kubernetes Tips](#docker--kubernetes-tips)  
+   - [General Kubernetes Architecture](#general-kubernetes-architecture)  
+   - [MySQL Installation Notes](#mysql-installation-notes)  
+
+<br>
+
 Install the following:
 1. Docker
 2. kubectl
