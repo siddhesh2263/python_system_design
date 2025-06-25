@@ -2,7 +2,7 @@
 
 <br>
 
-<em>This article focuses primarily on the technical implementation steps. It assumes some familiarity with the underlying concepts and does not dive deeply into theoretical explanations.</em>
+### <em>This article focuses primarily on the technical implementation steps. It assumes some familiarity with the underlying concepts and does not dive deeply into theoretical explanations.</em>
 
 <br>
 
